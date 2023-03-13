@@ -1,3 +1,4 @@
-FROM nginx:latest
-COPY ./nginx.html /usr/share/nginx/html/nginx.html
-
+FROM ubuntu:20.04 
+RUN apt-get -y update 
+RUN apt-get -y install nginx 
+COPY index.html /usr/share/nginx/html
