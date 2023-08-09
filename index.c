@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include <iostream>
+#include <cstring>
 
 void vulnerableFunction(char *input) {
     char buffer[10];
@@ -8,17 +9,17 @@ void vulnerableFunction(char *input) {
 int main() {
     int x = 10;
     int y = 20;
-    printf("Sum: %d\n", x+y); // Unused variables x and y
+    std::cout << "Sum: " << x+y << std::endl; // Unused variables x and y
 
     char *password = "123456"; // Potential hardcoded password vulnerability
     char userInput[20];
-    printf("Enter password: ");
-    scanf("%s", userInput);
+    std::cout << "Enter password: ";
+    std::cin >> userInput;
 
     if (strcmp(userInput, password) == 0) {
-        printf("Access granted!\n");
+        std::cout << "Access granted!" << std::endl;
     } else {
-        printf("Access denied!\n");
+        std::cout << "Access denied!" << std::endl;
     }
 
     return 0;
