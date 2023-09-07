@@ -33,4 +33,4 @@ jobs:
           rm trivy_0.17.2_Linux-64bit.tar.gz
       # Scan the Docker image
       - name: Scan Docker image with Trivy
-        run: trivy ${{ secrets.DOCKER_USERNAME }}
+        run: trivy ${{ secrets.DOCKER_USERNAME }}/git:v1
