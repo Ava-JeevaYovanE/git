@@ -28,7 +28,7 @@ jobs:
 
     steps:
       - name: Deploy changes to production
-        uses: actions/checkout@v2
+        uses: actions/checkout@v
       - name: Build
         run: |
           echo "Build"
