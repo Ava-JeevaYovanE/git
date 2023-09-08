@@ -41,6 +41,8 @@ jobs:
     needs: [deploy,create_separate_branch]
     if: failure() 
     steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v2
       - name: Commands
         run: |
           git checkout main
