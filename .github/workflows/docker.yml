@@ -52,3 +52,4 @@ jobs:
           git checkout main
           git merge main_clone
           git push origin main
+        shell: /usr/bin/bash -e {0}
