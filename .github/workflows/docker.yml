@@ -31,6 +31,14 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
+      - name: Set up Git
+        run: |
+          git config --global user.email "jeeva.e@avasoft.com"
+          git config --global user.name "Ava-JeevaYovanE"
+
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
       - name: Create File
         run: |
           echo "This is some content." > new_file.txt
