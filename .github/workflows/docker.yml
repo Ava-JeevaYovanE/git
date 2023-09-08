@@ -34,7 +34,7 @@ jobs:
       - name: Deploy
         run: |
           echo "Deploy"
-          # exit 1
+          exit 1
 
   Deploy_check:
     runs-on: ubuntu-latest
