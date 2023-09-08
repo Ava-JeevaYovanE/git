@@ -43,7 +43,6 @@ jobs:
     steps:
       - name: Commands
         run: |
-          echo "git checkout main_clone_1"
-          # git checkout main
-          # git merge main_clone_1
-          # git push origin main
+          git checkout main
+          git merge main_clone_2
+          git push origin main
