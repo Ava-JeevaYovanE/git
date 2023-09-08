@@ -28,6 +28,15 @@ jobs:
     needs: [create_separate_branch]
 
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Create File
+        run: |
+          echo "This is some content." > new_file.txt
+          git add new_file.txt
+          git commit -m "Add new_file.txt"
+          git push origin main
       - name: Build
         run: |
           echo "Build"
