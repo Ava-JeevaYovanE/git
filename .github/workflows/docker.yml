@@ -37,7 +37,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and push Docker image
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/git:v1
+          docker push ${{ secrets.DOCKER_USERNAME }}
           if [ $? -ne 0 ]; then
             echo "Deployment failed. Creating separate branch."
             git checkout main_clone
