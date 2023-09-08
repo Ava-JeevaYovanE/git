@@ -27,13 +27,13 @@ jobs:
     needs: [create_separate_branch]
 
     steps:
-      - name: Deploy changes to production
-        uses: actions/checkout@v2
       - name: Build
         run: |
           echo "Build"
       - name: Deploy
-        run: echo "Deploy"
+        run: |
+          echo "Deploy"
+          exit 1
 
   Deploy_check:
     runs-on: ubuntu-latest
