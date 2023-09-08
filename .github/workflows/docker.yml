@@ -46,9 +46,7 @@ jobs:
             git add .
             git commit -m "Deployment error. Creating separate branch"
             git push origin main_clone
+            git checkout main
+            git merge main_clone
+            git push origin main
           fi
-
-          # Regardless of the deployment status, merge separate_branch back to main
-          git merge main_clone
-          git push origin main
-        shell: /usr/bin/bash -e {0}
