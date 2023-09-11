@@ -51,7 +51,7 @@ jobs:
       - name: Deploy
         run: |
           echo "Deploy"
-          exit 0
+          exit 1
 
   Deploy_check:
     runs-on: ubuntu-latest
@@ -70,4 +70,3 @@ jobs:
           git pull main
           git merge main_clone_2 --allow-unrelated-histories
           git push origin main
-
