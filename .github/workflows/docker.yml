@@ -41,8 +41,8 @@ jobs:
 
       - name: Create File
         run: |
-          echo "This is some content." > new_file1111.txt
-          git add new_file1111.txt
+          echo "This is some content." > new_file11111.txt
+          git add new_file11111.txt
           git commit -m "Add new_file.txt"
           git push origin main
       - name: Build
@@ -62,7 +62,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Commands
         run: |
-          git fetch
+          git pull main
           git merge main_clone_2 --allow-unrelated-histories
           git push origin main
 
