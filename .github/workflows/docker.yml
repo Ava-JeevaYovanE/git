@@ -69,6 +69,7 @@ jobs:
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git checkout main
           git pull main
-          git init
+          git remote -v
+          git remote add origin https://github.com/Ava-JeevaYovanE/git.git
           git merge main_clone_2 --allow-unrelated-histories
           git push origin main
