@@ -44,8 +44,8 @@ jobs:
 
       - name: Create File
         run: |
-          echo "This is some content." > new_file.txt
-          git add new_file.txt
+          echo "This is some content." > new_file1.txt
+          git add new_file1.txt
           git commit -m "Add new_file2.txt"
           git push origin main
       - name: Build
