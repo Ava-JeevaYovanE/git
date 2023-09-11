@@ -41,9 +41,9 @@ jobs:
 
       - name: Create File
         run: |
-          echo "This is some content." > new_file.txt
+          echo "This is some content." > new_file1.txt
           git add new_file.txt
-          git commit -m "Add new_file.txt"
+          git commit -m "Add new_file1.txt"
           git push origin main
       - name: Build
         run: |
@@ -66,9 +66,9 @@ jobs:
           git config --global user.name "Ava-JeevaYovanE"
       - name: Commands
         run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git checkout main
           git pull main
           git init
-          git remote -v
           git merge main_clone_2 --allow-unrelated-histories
           git push origin main
