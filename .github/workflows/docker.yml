@@ -18,6 +18,9 @@ jobs:
         with:
           ref: main
 
+      - name: list directory
+        run: ls
+
       - name: Create separate branch
         run: |
           git checkout -b main_clone_2
@@ -65,12 +68,12 @@ jobs:
           git config --global user.email "jeeva.e@avasoft.com"
           git config --global user.name "Ava-JeevaYovanE"
       - name: Commands
-        run: |
-          git remote -v 
-          git remote rm origin
-          git remote add origin https://github.com/Ava-JeevaYovanE/git.git
-          git push --set-upstream -f origin main
-          git checkout main
-          git fetch --all
-          git merge origin main_clone_2 --allow-unrelated-histories
-          git push origin main
+        run: ls
+          # git remote -v 
+          # git remote rm origin
+          # git remote add origin https://github.com/Ava-JeevaYovanE/git.git
+          # git push --set-upstream -f origin main
+          # git checkout main
+          # git fetch --all
+          # git merge origin main_clone_2 --allow-unrelated-histories
+          # git push origin main
