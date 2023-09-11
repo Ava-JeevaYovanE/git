@@ -41,7 +41,7 @@ jobs:
 
       - name: Create File
         run: |
-          echo "This is some content." > new_file2.txt
+          echo "This is some content." > new_file.txt
           git add new_file.txt
           git commit -m "Add new_file2.txt"
           git push origin main
@@ -68,7 +68,7 @@ jobs:
         run: |
           git remote -v 
           git remote rm origin
-          git remote set-url origin https://github.com/Ava-JeevaYovanE/git.git
+          git remote add origin https://github.com/Ava-JeevaYovanE/git.git
           git push --set-upstream -f origin main
           git merge main_clone_2 --allow-unrelated-histories
           git push origin main
