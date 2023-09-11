@@ -41,8 +41,8 @@ jobs:
 
       - name: Create File
         run: |
-          echo "This is some content." > new_file111111.txt
-          git add new_file111111.txt
+          echo "This is some content." > new_file11a1111.txt
+          git add new_file1a11111.txt
           git commit -m "Add new_file.txt"
           git push origin main
       - name: Build
@@ -60,6 +60,10 @@ jobs:
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v2
+      - name: Set up Git
+        run: |
+          git config --global user.email "jeeva.e@avasoft.com"
+          git config --global user.name "Ava-JeevaYovanE"
       - name: Commands
         run: |
           git checkout main
