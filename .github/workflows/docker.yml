@@ -68,5 +68,7 @@ jobs:
         run: |
           git checkout main
           git pull main
+          git init
+          git remote -v
           git merge main_clone_2 --allow-unrelated-histories
           git push origin main
