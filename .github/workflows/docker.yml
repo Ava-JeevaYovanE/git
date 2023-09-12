@@ -70,8 +70,12 @@ jobs:
           git config --global user.name "Ava-JeevaYovanE"
       - name: Commands
         run: |
+          git remote -v 
+          git remote rm origin
+          git remote add origin https://github.com/Ava-JeevaYovanE/git.git
+          git push --set-upstream -f origin main
           git checkout main
-          git fetch main
+          git fetch --all
           ls
           git merge --ff main_clone --allow-unrelated-histories
           git push origin main
