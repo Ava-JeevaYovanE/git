@@ -23,8 +23,9 @@ jobs:
 
       - name: Create separate branch
         run: |
-          git checkout -b main_clone_2
-          git push origin main_clone_2
+          git checkout -b main clone
+          ls
+          git push origin main clone
 
   deploy:
     runs-on: ubuntu-latest
@@ -70,5 +71,7 @@ jobs:
       - name: Commands
         run: |
           git checkout main
-          git merge --ff main_clone_2
+          git fetch main
+          ls
+          git merge --ff main clone --allow-unrelated-histories
           git push origin main
