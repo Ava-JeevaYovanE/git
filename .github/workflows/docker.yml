@@ -70,5 +70,5 @@ jobs:
       - name: Commands
         run: |
           git checkout main
-          git merge main_clone_2
+          git merge --force main_clone_2
           git push origin main
