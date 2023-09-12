@@ -77,5 +77,5 @@ jobs:
           git checkout main
           git fetch --all
           ls
-          git merge --ff main_clone --allow-unrelated-histories
+          git merge --ff origin/main_clone --allow-unrelated-histories
           git push origin main
