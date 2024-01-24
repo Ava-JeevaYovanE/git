@@ -1,11 +1,9 @@
 name: Deploy to Production
 
 on:
-  workflow_dispatch:
-  push:
+  pull_request:
     branches:
       - main
-
 jobs:
   create_separate_branch:
     runs-on: ubuntu-latest
